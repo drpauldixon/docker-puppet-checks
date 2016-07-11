@@ -24,7 +24,7 @@ docker run -t -i --rm -v $PWD:/code puppet_tests /check manifest.pp
 docker run -t -i --rm -v $PWD:/code puppet_tests /check hiera.yaml
 ```
 
-**Check a manifest (using future parser, `/checkf`):**
+**Check a manifest using the future parser (`/checkf`):**
 
 ```
 docker run -t -i --rm -v $PWD:/code puppet_tests /checkf manifest.pp
