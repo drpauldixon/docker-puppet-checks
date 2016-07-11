@@ -1,0 +1,10 @@
+#!/bin/bash
+# Run puppet tests if the extension is .pp
+if [ ${1: -3} == ".pp" ]
+then
+  puppet-lint /code/$1
+  puppet parser validate --parser future /code/$1
+else
+  # Assume it's a yaml file
+  /check_yaml /code/$1
+fi
