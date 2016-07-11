@@ -12,6 +12,12 @@ docker build -t puppet_tests -f Dockerfile .
 
 ## Run
 
+I usually run via an alias in `~/.zshrc` (or `~/.bashrc`):
+
+```
+alias check-puppet='docker run -t -i --rm -v $PWD:/code puppet_checks /checkf'
+```
+
 **Check a manifest (`/check`):**
 
 ```
